@@ -1,1 +1,3 @@
-# kafka-real-time-responder
+This project is a distributed task queue system designed to manage emergency calls for medical, fire, and police services in Bangalore. It uses Apache Kafka to distribute tasks in real-time to multiple workers. Each emergency call includes details like location, priority, severity, or threat level, based on the type of emergency.
+
+The system generates random emergency calls and sends them to Kafka, where workers process them. Workers calculate response times using preset coordinates (e.g., for hospitals, fire stations, and police stations). For fire emergencies, it calculates an evacuation radius. For medical emergencies, it determines urgency based on severity. For police emergencies, it evaluates the threat level. A heartbeat mechanism checks if workers are idle or processing tasks.
